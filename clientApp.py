@@ -18,7 +18,7 @@ CORS(app)
 class ClientApp:
     def __init__(self):
         self.filename = "inputImage.jpg"
-        #modelPath = 'research/ssd_mobilenet_v1_coco_2017_11_17'
+        
         self.objectDetection = Detector(self.filename)
 
 
@@ -46,7 +46,7 @@ def predictRoute():
     return jsonify(result)
 
 
-#port = int(os.getenv("PORT"))
+
 if __name__ == "__main__":
     clApp = ClientApp()
     port = 9500
